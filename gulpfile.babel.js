@@ -1,20 +1,11 @@
 import gulp from 'gulp';
 import connect from 'gulp-connect';
-import jade from 'gulp-jade';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
-import autoprefixer from 'autoprefixer';
+import prefix from 'gulp-autoprefixer'
 import image from 'gulp-image';
-
-
-gulp.task('jade', ()=>{
-  gulp.src('./src/*.jade')
-  	.pipe(jade({
-  		pretty: true
-  	}))
-  	.pipe(gulp.dest('./dist/'))
-  	.pipe(connect.reload())
-});
+import sass from 'gulp-sass';
+import include from 'gulp-include';
 
 gulp.task('connect', ()=>{
   connect.server({
@@ -26,15 +17,30 @@ gulp.task('connect', ()=>{
 });
 
 gulp.task('html', ()=>{
-  gulp.src('./src/**/*.html')
+  gulp.src('./src/*.html')
+    .pipe(include()).on('error', console.log)
+    .pipe(gulp.dest('./dist/'))
   	.pipe(connect.reload())
 });
 
-gulp.task('styles', ['autoprefixer'],function() {  
+gulp.task('styles',function() {  
     gulp.src(['./src/**/*.css'])
+        .pipe(prefix('last 22 versions'))
         .pipe(gulp.dest('./dist'))
         .pipe(connect.reload())
 });
+
+gulp.task('sass', function () {
+  gulp.src('./src/sass/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(prefix('last 22 versions'))
+    .pipe(gulp.dest('./dist'));
+});
+ 
+gulp.task('sass:watch', function () {
+  gulp.watch('./src/sass/*.scss', ['sass']);
+});
+
 
 gulp.task('image', function () {
   gulp.src('./src/img/**/*')
@@ -44,7 +50,6 @@ gulp.task('image', function () {
 
 gulp.task('watch', ()=>{
 	gulp.watch('./src/**/*.html', ['html']);
-	gulp.watch('./src/*.jade', ['jade']);
   gulp.watch('./src/**/*.css', ['styles']);
   gulp.watch('./src/img/**/*', ['image']);
 });
@@ -57,6 +62,6 @@ gulp.task('autoprefixer', ()=>{
         .pipe(gulp.dest('./dist'));
 });
 //,'html'
-gulp.task('default', ['image','styles','connect','jade','watch'], function () {
+gulp.task('default', ['image','styles','connect','html','watch'], function () {
  
 });

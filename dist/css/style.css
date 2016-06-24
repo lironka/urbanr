@@ -105,7 +105,8 @@ body{
 	background-image:url(/img/call.png);
 }
 .btn-urban {
-	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	        border-radius: 20px;
 	background-color: #ff7f35;
 	border-color: #ea6e27;
 	color: #fff;
@@ -209,7 +210,8 @@ body{
 }
 .m-numbers {
 	background-color: #ff7f35;
-	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	        border-radius: 15px;
 	color: #fff;
 	left: 43px;
 	padding: 0 6px;
@@ -247,4 +249,3 @@ body{
 	min-width: 600px;
 }
 .detail .col-md-2 {min-width: 148px;}
-/*# sourceMappingURL=style.css.map */
