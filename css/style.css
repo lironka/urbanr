@@ -31,13 +31,13 @@ body{
 	display: inline-block;
 }
 .app-photo{
-	background-image:url(/img/photos.png);
+	background-image:url(img/photos.png);
 }
 .app-map {
-	background-image:url(/img/map.png);
+	background-image:url(img/map.png);
 }
 .app-streetview{
-	background-image:url(/img/streetview.png);
+	background-image:url(img/streetview.png);
 }
 .price{
 	background-color: #000;
@@ -96,13 +96,13 @@ body{
 	height: 40px;
 }
 .img-chat{
-	background-image:url(/img/chat.png);
+	background-image:url(img/chat.png);
 }
 .img-schedule {
-	background-image:url(/img/schedule.png);
+	background-image:url(img/schedule.png);
 }
 .img-call {
-	background-image:url(/img/call.png);
+	background-image:url(img/call.png);
 }
 .btn-urban {
 	border-radius: 20px;
