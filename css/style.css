@@ -31,13 +31,13 @@ body{
 	display: inline-block;
 }
 .app-photo{
-	background-image:url('img/photos.png');
+	background-image:url('../img/photos.png');
 }
 .app-map {
-	background-image:url('img/map.png');
+	background-image:url('../img/map.png');
 }
 .app-streetview{
-	background-image:url('img/streetview.png');
+	background-image:url('../img/streetview.png');
 }
 .price{
 	background-color: #000;
@@ -96,13 +96,13 @@ body{
 	height: 40px;
 }
 .img-chat{
-	background-image:url('img/chat.png');
+	background-image:url('../img/chat.png');
 }
 .img-schedule {
-	background-image:url('img/schedule.png');
+	background-image:url('../img/schedule.png');
 }
 .img-call {
-	background-image:url('img/call.png');
+	background-image:url('../img/call.png');
 }
 .btn-urban {
 	border-radius: 20px;
@@ -167,7 +167,7 @@ body{
 	min-width: 147px;	
 }
 .amenities li:before {
-	background-image: url('img/checksuccess.png');
+	background-image: url('../img/checksuccess.png');
 	width: 42px; 
 	height: 42px;
 	display: inline-block;
@@ -176,7 +176,7 @@ body{
 	float:left;
 }
 .navbar .navbar-brand.logo-img{
-	background-image: url('img/header/logo.png');
+	background-image: url('../img/header/logo.png');
 	background-repeat: no-repeat;
 	width: 152px;
 	height: 63px;
