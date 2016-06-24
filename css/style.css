@@ -167,7 +167,7 @@ body{
 	min-width: 147px;	
 }
 .amenities li:before {
-	background-image: url('/img/checksuccess.png');
+	background-image: url(img/checksuccess.png);
 	width: 42px; 
 	height: 42px;
 	display: inline-block;
@@ -176,7 +176,7 @@ body{
 	float:left;
 }
 .navbar .navbar-brand.logo-img{
-	background-image: url('/img/header/logo.png');
+	background-image: url(img/header/logo.png);
 	background-repeat: no-repeat;
 	width: 152px;
 	height: 63px;
